@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta name="csrf-token" content="dLVcl5G8FrjJCFVevfDqxQoKL4djQf7cEtv5lJMY">
+    <link rel="shortcut icon" type="image/png" href="https://hyipmax.springsoftit.com/demo/asset/common/images/placeholder.png">
+    <title>
+        Hyipmax- Withdraw money
+    </title>
+
+    <link href="https://hyipmax.springsoftit.com/demo/asset/common/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://hyipmax.springsoftit.com/demo/asset/common/css/slick.css">
+    <link rel="stylesheet" href="https://hyipmax.springsoftit.com/demo/asset/common/css/animate.min.css">
+    <link rel="stylesheet" href="https://hyipmax.springsoftit.com/demo/asset/common/css/font-awsome.min.css">
+    <link rel="stylesheet" href="https://hyipmax.springsoftit.com/demo/asset/common/css/iziToast.min.css">
+    <link href="https://hyipmax.springsoftit.com/demo/asset/theme5/frontend/css/style.css" rel="stylesheet">
+
+
+</head>
+
+<body>
+    <div id="preloader"></div>
+
+
+    <!-- ======= Header ======= -->
+    <header id="header" class="fixed-top header-inner-pages">
+        <div class="container-fluid d-flex align-items-center justify-content-between">
+            <div class="d-flex flex-wrap align-items-center">
+                <div class="logo me-auto me-lg-0 ">
+                    <a href="https://hyipmax.springsoftit.com/demo">
+                                                    <img class="img-fluid rounded sm-device-img text-align"
+                                src="/img/VRTX.png" width="100%" alt="pp">
+                                            </a>
+                </div>
+            </div>
+            <div class="header-right d-flex">
+                <select class="changeLang" aria-label="Default select example">
+                                            <option value="ka"
+                            >
+                            Georgia
+                        </option>
+                                            <option value="pt"
+                            >
+                            Portuguese
+                        </option>
+                                            <option value="fr"
+                            >
+                            Francais
+                        </option>
+                                            <option value="afr"
+                            >
+                            Afrikaans
+                        </option>
+                                            <option value="spanish"
+                            >
+                            Spanish
+                        </option>
+                                            <option value="EN"
+                            >
+                            English
+                        </option>
+                                    </select>
+                <div class="dropdown ms-3">
+                    <button class="dropdown-toggle user-toggle-menu" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                      
+                            <img src="https://hyipmax.springsoftit.com/demo/asset/common/images/user" alt="pp">
+                        
+                        <span class="ms-2">IYOHA EGHONGHON</span>
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton1">
+                        <li><a class="dropdown-item" href="https://hyipmax.springsoftit.com/demo/2fa">2fa</a></li>
+                        <li><a class="dropdown-item" href="https://hyipmax.springsoftit.com/demo/profile/setting">Settings</a></li>
+                        <li><a class="dropdown-item" href="https://hyipmax.springsoftit.com/demo/logout">Logout</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- End Header -->
+
+    <main id="main" class="dashboard-main">
+        <section class="dashboard-section">
+
+            <div class="d-sidebar">
+                <ul class="d-sidebar-menu">
+                    <li class="">
+                        <a href="dashboard.html"><i data-feather="home"></i> Dashboard</a>
+                    </li>
+
+                    <li class="has_submenu ">
+                        <a href="investmentplan.html"><i data-feather="zap"></i> Investment</a>
+                       
+                    </li>
+
+                    <li class="has_submenu ">
+                         <a href="deposit.html"><i data-feather="briefcase"></i> Deposit</a>
+                        
+                    </li>
+
+                    <li class="has_submenu open">
+                         <a href="withdraw.html"><i data-feather="credit-card"></i> Withdraw</a>
+                        <ul class="submenu">
+                            <li class="active">
+                                <a href="https://hyipmax.springsoftit.com/demo/withdraw"><i data-feather="chevrons-right"></i> Withdraw</a>
+                            </li>
+                            <li class="">
+                                <a href="https://hyipmax.springsoftit.com/demo/withdraw/all"><i data-feather="chevrons-right"></i> Withdraw log</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class=""><a href="transfer-money.html"><i data-feather="repeat"></i> Transfer money</a>
+                    </li>
+
+                    <li class="">
+                        <a href="#">
+            <i data-feather="file-text"></i>
+                Loan
+            </a>
+                    </li>
+
+
+                    <li class="">
+                        <a href="#"><i data-feather="file-text"></i>Space X</a>
+                    </li>
+                    <li class="">
+                        <a href="#"><i data-feather="file-text"></i> Connect Wallet</a>
+                    </li>
+                     <li class="">
+                        <a href="#"><i data-feather="file-text"></i> Refferal log</a>
+                    </li>
+
+        
+                    <li class="">
+                        <a href="#"><i data-feather="life-buoy"></i> Support</a>
+                    </li>
+                    <li>
+                        <a href="/views/signin.html"><i data-feather="log-out"></i> Logout</a>
+                    </li>
+                </ul>
+                <div class="d-plan-notice mt-4 mx-3">
+                    <p class="mb-0">Your current plan -N/A
+                    </p>
+                    <a href="https://hyipmax.springsoftit.com/demo/investmentplan">Update plan <i class="fas fa-arrow-up"></i></a>
+                </div>
+            </div>
+
+
+            <!-- mobile bottom menu start -->
+            <div class="mobile-bottom-menu-wrapper">
+                <ul class="mobile-bottom-menu">
+                    <li>
+                       
+                        <a href="deposit.html" class="">
+        <i class="bi bi-wallet2"></i>
+        <span>Deposit</span>
+      </a>
+                    </li>
+                    <li>
+                        
+                        <a href="investmentplan.html" class="">
+        <i class="bi bi-piggy-bank"></i>
+        <span>My invest</span>
+      </a>
+                    </li>
+                    <li>
+                        <a href="https://hyipmax.springsoftit.com/demo/dashboard" class="">
+        <i class="bi bi-house-door"></i>
+        <span>Home</span>
+      </a>
+                    </li>
+                    <li>
+                        <a href="https://hyipmax.springsoftit.com/demo/withdraw" class="active">
+        <i class="bi bi-cash-coin"></i>
+        <span>Withdraw</span>
+      </a>
+                    </li>
+                    <li>
+                        <a href="#" class="">
+        <i class="bi bi-shuffle"></i>
+        <span>More</span>
+      </a>
+                    </li>
+                </ul>
+            </div>
+            <!-- mobile bottom menu end -->
+            <div class="dashboard-body-part">
+
+                <div class="mobile-page-header">
+                    <h5 class="title">Withdraw</h5>
+                    <a href="https://hyipmax.springsoftit.com/demo/dashboard" class="back-btn"><i class="bi bi-arrow-left"></i> Back</a>
+                </div>
+
+                <div class="row gy-4">
+                    <div class="col-xxl-8 col-lg-6">
+                        <div class="site-card">
+                            <form action="" method="post">
+                                <input type="hidden" name="_token" value="dLVcl5G8FrjJCFVevfDqxQoKL4djQf7cEtv5lJMY">
+                                <div class="card-header">
+                                    <h5 class="mb-0">
+                                        Current balance: <span class="color-change">1,000.00 $</span>
+                                    </h5>
+                                </div>
+                                <div class="card-body">
+                                    <div class="form-group">
+                                        <label for="">Withdraw method</label>
+                                        <select name="method" id="" class="select">
+                                    <option value="" selected>Select method</option>
+                                                                            <option value="1"
+                                            data-url="https://hyipmax.springsoftit.com/demo/withdraw/fetch/1">
+                                            Mari Fela</option>
+                                                                    </select>
+                                    </div>
+                                    <div class="row appendData"></div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+                    <div class="col-xxl-4 col-lg-6 withdraw-ins">
+                        <div class="site-card">
+                            <div class="card-header">
+                                <h5 class="mb-0">Withdraw instruction</h5>
+                            </div>
+                            <div class="card-body">
+                                <p class="instruction"></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+    <script src="https://hyipmax.springsoftit.com/demo/asset/common/js/jquery.min.js"></script>
+    <script src="https://hyipmax.springsoftit.com/demo/asset/common/js/bootstrap.bundle.min.js"></script>
+    <script src="https://hyipmax.springsoftit.com/demo/asset/theme5/frontend/js/feather.min.js"></script>
+    <script src="https://hyipmax.springsoftit.com/demo/asset/common/js/slick.min.js"></script>
+    <script src="https://hyipmax.springsoftit.com/demo/asset/common/js/iziToast.min.js"></script>
+    <script src="https://hyipmax.springsoftit.com/demo/asset/theme5/frontend/js/user_dashboard.js"></script>
+
+
+    <script>
+        $(function() {
+            'use strict'
+
+            $('select[name=method]').on('change', function() {
+                if ($(this).val() == '') {
+                    $('.appendData').addClass('d-none');
+                    $('.instruction').text('');
+                    return;
+                }
+                $('.appendData').removeClass('d-none');
+                getData($('select[name=method] option:selected').data('url'))
+            })
+
+            $(document).on('keyup', '.amount', function() {
+                const withdraw_charge_type = $('.withdraw_charge_type').text();
+
+                if ($(this).val() == '') {
+                    $('.final_amo').val(0);
+                    return
+                }
+
+                const charge = $('.charge').val();
+
+                if (withdraw_charge_type.localeCompare("percent") == 1) {
+                    let percentAmount = Number.parseFloat($(this).val()) + Number.parseFloat((charge * $(
+                        this).val()) / 100);
+
+                    $('.final_amo').val(percentAmount.toFixed(2));
+                    return
+                }
+                if (withdraw_charge_type.localeCompare("fixed") == 1) {
+
+                    let totalAmount = Number.parseFloat($(this).val()) + Number.parseFloat(charge);
+
+                    $('.final_amo').val(totalAmount).toFixed(2);
+                }
+            })
+
+            function getData(url) {
+                $.ajax({
+                    url: url,
+                    method: "GET",
+                    success: function(response) {
+
+                        $('.instruction').html(response.withdraw_instruction)
+                        let html = `
+
+                                <div class="col-md-12 mb-3 mt-3">
+                                    <label for="">Withdraw amount <span class="sp_text_danger">*</span></label>
+                                    <input type="text" name="amount" class="form-control amount" required>
+                                    <p class="text-small color-change mb-0 mt-1"><span>Min amount &amp;  ${Number.parseFloat(response.min_amount).toFixed(2)}</span> <span>Max amount ${Number.parseFloat(response.max_amount).toFixed(2)}</span></p>
+                                </div>
+
+                                <div class="col-md-12 mb-3">
+                                    <label>Withdraw charge</label>
+                                    <div class="input-group">
+                                        <input type="text" class="form-control charge" value="${Number.parseFloat(response.charge).toFixed(2)}" required disabled>
+                                        <div class="input-group-text">
+                                            <span class="withdraw_charge_type">${response.charge_type}<span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-12 mb-3">
+                                    <label for="">Final withdraw amount <span class="sp_text_danger">*</span></label>
+                                    <input type="text" name="final_amo" class="form-control final_amo" required readonly>
+                                </div>
+
+                                <div class="col-md-12 mb-3">
+                                    <label for="">Account email / wallet address <span class="sp_text_danger">*</span></label>
+                                    <input type="text" name="email" class="form-control" required>
+                                </div>
+
+                                <div class="col-md-12 mb-3">
+                                    <label for="">Account information</label>
+                                   <textarea class="form-control" name="account_information" row="5"></textarea>
+                                </div>
+
+                                <div class="col-md-12 mb-3">
+                                    <label for="">Additional note</label>
+                                   <textarea class="form-control" name="note" row="5"></textarea>
+                                </div>
+
+                                <div class="col-md-12">
+                                   <button class="btn main-btn w-100" type="submit">Withdraw now</button>
+                                </div>
+                   `;
+
+                        $('.appendData').html(html);
+                    }
+                })
+            }
+        })
+    </script>
+
+
+
+
+
+
+    <script>
+        'use strict'
+        var url = "https://hyipmax.springsoftit.com/demo/changeLang";
+
+        $(".changeLang").change(function() {
+            if ($(this).val() == '') {
+                return false;
+            }
+            window.location.href = url + "?lang=" + $(this).val();
+        });
+
+        feather.replace();
+
+        // responsive menu slideing
+        $(".d-sidebar-menu>li>a").on("click", function() {
+            var element = $(this).parent("li");
+            if (element.hasClass("open")) {
+                element.removeClass("open");
+                element.find("li").removeClass("open");
+                element.find("ul").slideUp(500, "linear");
+            } else {
+                element.addClass("open");
+                element.children("ul").slideDown();
+                element.siblings("li").children("ul").slideUp();
+                element.siblings("li").removeClass("open");
+                element.siblings("li").find("li").removeClass("open");
+                element.siblings("li").find("ul").slideUp();
+            }
+        });
+
+        $('.sidebar-open-btn').on('click', function() {
+            $(this).toggleClass('active');
+            $('.d-sidebar').toggleClass('active');
+        });
+    </script>
+</body>
+
+</html>

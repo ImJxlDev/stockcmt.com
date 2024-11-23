@@ -1,0 +1,229 @@
+<style>
+    /* Base popup styles */
+    .popup {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: #ffffff;
+        width: 90%;
+        max-width: 500px;
+        border-radius: 16px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        z-index: 1000;
+        display: none;
+        padding: 24px;
+        animation: slideIn 0.3s ease-out;
+    }
+    
+    .popup.active {
+        display: block;
+    }
+    
+    /* Overlay */
+    .popup-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.6);
+        backdrop-filter: blur(4px);
+        z-index: 999;
+        display: none;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+    
+    .popup-overlay.active {
+        display: block;
+        opacity: 1;
+    }
+    
+    /* Success Message Popup */
+    .success-popup {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: #ffffff;
+        padding: 24px;
+        border-radius: 16px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        z-index: 1001;
+        display: none;
+        text-align: center;
+        width: 90%;
+        max-width: 400px;
+    }
+    
+    .success-popup.active {
+        display: block;
+        animation: bounceIn 0.5s ease-out;
+    }
+    
+    .success-popup .success-icon {
+        width: 60px;
+        height: 60px;
+        background: #4CAF50;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 20px;
+        color: white;
+        font-size: 30px;
+    }
+    
+    .success-popup h3 {
+        color: #333;
+        margin-bottom: 16px;
+    }
+    
+    .success-popup p {
+        color: #666;
+        margin-bottom: 24px;
+    }
+    
+    .success-popup button {
+        background: #4CAF50;
+        color: white;
+        border: none;
+        padding: 12px 24px;
+        border-radius: 8px;
+        cursor: pointer;
+        font-weight: 500;
+        transition: background 0.3s ease;
+    }
+    
+    .success-popup button:hover {
+        background: #45a049;
+    }
+    
+    /* Form Styling */
+    .form-group {
+        margin-bottom: 20px;
+    }
+    
+    .form-group label {
+        display: block;
+        margin-bottom: 8px;
+        color: #333;
+        font-weight: 500;
+    }
+    
+    .form-control {
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        transition: border-color 0.3s ease;
+    }
+    
+    .form-control:focus {
+        border-color: #007bff;
+        outline: none;
+        box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.1);
+    }
+    
+    .main-btn {
+        background: #007bff;
+        color: white;
+        border: none;
+        padding: 12px 24px;
+        border-radius: 8px;
+        cursor: pointer;
+        font-weight: 500;
+        transition: all 0.3s ease;
+        width: 100%;
+    }
+    
+    .main-btn:hover {
+        background: #0056b3;
+        transform: translateY(-2px);
+    }
+    
+    /* Animations */
+    @keyframes slideIn {
+        from {
+            opacity: 0;
+            transform: translate(-50%, -45%);
+        }
+        to {
+            opacity: 1;
+            transform: translate(-50%, -50%);
+        }
+    }
+    
+    @keyframes bounceIn {
+        0% {
+            opacity: 0;
+            transform: translate(-50%, -45%) scale(0.8);
+        }
+        50% {
+            transform: translate(-50%, -50%) scale(1.05);
+        }
+        100% {
+            opacity: 1;
+            transform: translate(-50%, -50%) scale(1);
+        }
+    }
+    
+    /* Mobile Responsiveness */
+    @media (max-width: 768px) {
+        .popup, .success-popup {
+            width: 95%;
+            padding: 20px;
+        }
+    }
+    </style>
+    
+    <!-- Success Message Popup -->
+    <div class="success-popup" id="successPopup">
+        <div class="success-icon">✓</div>
+        <h3>Request Sent Successfully!</h3>
+        <p>Your transfer request has been submitted.</p>
+        <button onclick="closeSuccessPopup()">OK</button>
+    </div>
+    
+    <!-- Popup Overlay -->
+    <div class="popup-overlay" id="overlay"></div>
+    
+    <!-- Transfer Form Popup -->
+    <div class="popup" id="transferPopup">
+        <div class="card-header d-flex flex-wrap justify-content-between align-items-center">
+            <h4 class="mb-0">Transfer Money</h4>
+            <p class="mb-0">Current Balance: 1,000.00 $</p>
+        </div>
+        <div class="card-body">
+            <form id="transferForm" onsubmit="handleTransferSubmit(event)">
+                <div class="form-group">
+                    <label for="email">Receiver Email</label>
+                    <input type="email" name="email" id="email" class="form-control" placeholder="Transfer account email" required>
+                </div>
+    
+                <div class="form-group">
+                    <label for="amount">Amount</label>
+                    <input type="number" name="amount" id="amount" class="form-control" placeholder="Transfer Amount" required min="100" max="100000">
+                    <p id="totalAmount" class="text-muted mt-2"></p>
+                </div>
+    
+                <p class="text-center mb-3">Transfer charge 2%</p>
+    
+                <ul class="list-group mb-4">
+                    <li class="list-group-item d-flex justify-content-between">
+                        <span>Min transfer amount</span>
+                        <span>100 $</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between">
+                        <span>Max transfer amount</span>
+                        <span>100,000 $</span>
+                    </li>
+                </ul>
+    
+                <button type="submit" class="main-btn">Transfer Money</button>
+            </form>
+        </div>
+    </div>
+    
+   

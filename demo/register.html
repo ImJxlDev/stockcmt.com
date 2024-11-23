@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="csrf-token" content="8t2qBsZ9bNC9IJbiVftzlfRSkXrnkeSx6CZqjTc3">
+
+    <link rel="shortcut icon" type="image/png" href="https://hyipmax.springsoftit.com/demo/asset/common/images/placeholder.png">
+
+    <title>Vertex - Register user</title>
+
+    <link rel="stylesheet" href="https://hyipmax.springsoftit.com/demo/asset/theme5/frontend/css/cookie.css">
+    <link href="https://hyipmax.springsoftit.com/demo/asset/common/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://hyipmax.springsoftit.com/demo/asset/common/css/animate.min.css">
+    <link rel="stylesheet" href="https://hyipmax.springsoftit.com/demo/asset/common/css/slick.css">
+    <link rel="stylesheet" href="https://hyipmax.springsoftit.com/demo/asset/common/css/font-awsome.min.css">
+    <link rel="stylesheet" href="https://hyipmax.springsoftit.com/demo/asset/common/css/iziToast.min.css">
+    <link href="https://hyipmax.springsoftit.com/demo/asset/theme5/frontend/css/style.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://hyipmax.springsoftit.com/demo/asset/theme1/frontend/css/color.php?primary_color=">
+</head>
+
+<body>
+    <div id="preloader"></div>
+
+    <main id="main" class="main-img">
+        <section class="auth-section auth-section-two">
+            <div class="auth-wrapper">
+                <div class="auth-top-part">
+                    <a href="https://hyipmax.springsoftit.com/demo" class="auth-logo">
+                        <img class="img-fluid rounded sm-device-img text-align" src="/img/VRTX.png" width="100%" alt="pp">
+                    </a>
+                    <p class="mb-0"><span class="me-2">Already registered?</span> <a class="btn main-btn btn-sm" href="/signin.html">Login</a></p>
+                </div>
+                <div class="auth-body-part">
+                    <div class="auth-form-wrapper">
+                        <h3 class="text-center mb-4">Create an account</h3>
+                        <form id="signupForm">
+                            <div class="row gy-3">
+                                <div class="col-md-6">
+                                    <label for="first_name">First Name</label>
+                                    <input type="text" class="form-control" name="fname" id="first_name" placeholder="First name" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="last_name">Last Name</label>
+                                    <input type="text" class="form-control" name="lname" id="last_name" placeholder="Last name" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="username">Username</label>
+                                    <input type="text" class="form-control" name="username" id="username" placeholder="User name" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="phone">Phone</label>
+                                    <input type="text" class="form-control" name="phone" id="phone" placeholder="Phone" required>
+                                </div>
+                                <div class="col-md-12">
+                                    <label for="email">Email</label>
+                                    <input type="email" class="form-control" name="email" id="email" placeholder="Email" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="password">Password</label>
+                                    <input type="password" class="form-control" name="password" id="password" placeholder="Password" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="password_confirmation">Confirm Password</label>
+                                    <input type="password" class="form-control" name="password_confirmation" id="password_confirmation" placeholder="Confirm password" required>
+                                </div>
+                                <div class="col-lg-12">
+                                    <div class="form-check">
+                                        <input type="checkbox" class="form-check-input" name="check" id="exampleCheck1" required>
+                                        <label class="form-check-label" for="exampleCheck1">I agree to the <a href="/privacy/policy" class="text-primary">Privacy Policy</a></label>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12">
+                                    <button class="btn btn-primary w-100" type="submit">Register</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="auth-footer-part">
+                    <p class="text-center mb-0">
+                        Copyright 2024 <a href="/index.html">Vertex Shares</a>.
+                    </p>
+                </div>
+            </div>
+            <div class="auth-thumb-area" style="background-image: url('/img/in-signin-image.jpg')">
+                <div class="auth-thumb"></div>
+            </div>
+        </section>
+    </main>
+
+    <script src="https://hyipmax.springsoftit.com/demo/asset/common/js/jquery.min.js"></script>
+    <script src="https://hyipmax.springsoftit.com/demo/asset/common/js/bootstrap.bundle.min.js"></script>
+    <script src="https://hyipmax.springsoftit.com/demo/asset/common/js/slick.min.js"></script>
+    <script src="https://hyipmax.springsoftit.com/demo/asset/common/js/wow.min.js"></script>
+    <script src="https://hyipmax.springsoftit.com/demo/asset/theme5/frontend/js/jquery.paroller.min.js"></script>
+    <script src="https://hyipmax.springsoftit.com/demo/asset/theme5/frontend/js/TweenMax.min.js"></script>
+    <script src="https://hyipmax.springsoftit.com/demo/asset/common/js/iziToast.min.js"></script>
+    <script src="https://hyipmax.springsoftit.com/demo/asset/theme5/frontend/js/main.js"></script>
+
+    <script>
+        document.getElementById('signupForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Collect form values
+            const firstName = document.getElementById('first_name').value;
+            const lastName = document.getElementById('last_name').value;
+            const username = document.getElementById('username').value;
+            const phone = document.getElementById('phone').value;
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+            const confirmPassword = document.getElementById('password_confirmation').value;
+            const privacyCheck = document.getElementById('exampleCheck1').checked;
+
+            // Validation checks
+            if (password !== confirmPassword) {
+                alert('Passwords do not match');
+                return;
+            }
+
+            if (!privacyCheck) {
+                alert('Please agree to the Privacy Policy');
+                return;
+            }
+
+            // Check if user already exists
+            const existingUsers = JSON.parse(localStorage.getItem('users') || '[]');
+            const userExists = existingUsers.some(user => user.email === email);
+
+            if (userExists) {
+                alert('User with this email already exists');
+                return;
+            }
+
+            // Create new user object
+            const newUser = {
+                firstName,
+                lastName,
+                username,
+                phone,
+                email,
+                password: btoa(password), // Simple base64 encoding (not secure for production)
+                createdAt: new Date().toISOString()
+            };
+
+            // Save user to localStorage
+            existingUsers.push(newUser);
+            localStorage.setItem('users', JSON.stringify(existingUsers));
+
+            // Redirect to login page
+            window.location.href = '/signin.html';
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta name="csrf-token" content="8t2qBsZ9bNC9IJbiVftzlfRSkXrnkeSx6CZqjTc3">
+    <link rel="shortcut icon" type="image/png" href="https://hyipmax.springsoftit.com/demo/asset/common/images/placeholder.png">
+    <title>
+        Hyipmax- Investment plan
+    </title>
+
+    <link href="https://hyipmax.springsoftit.com/demo/asset/common/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://hyipmax.springsoftit.com/demo/asset/common/css/slick.css">
+    <link rel="stylesheet" href="https://hyipmax.springsoftit.com/demo/asset/common/css/animate.min.css">
+    <link rel="stylesheet" href="https://hyipmax.springsoftit.com/demo/asset/common/css/font-awsome.min.css">
+    <link rel="stylesheet" href="https://hyipmax.springsoftit.com/demo/asset/common/css/iziToast.min.css">
+    <link href="https://hyipmax.springsoftit.com/demo/asset/theme5/frontend/css/style.css" rel="stylesheet">
+
+
+</head>
+
+<body>
+    <div id="preloader"></div>
+
+
+    <!-- ======= Header ======= -->
+    <header id="header" class="fixed-top header-inner-pages">
+        <div class="container-fluid d-flex align-items-center justify-content-between">
+            <div class="d-flex flex-wrap align-items-center">
+                <div class="logo me-auto me-lg-0 ">
+                    <a href="https://hyipmax.springsoftit.com/demo">
+                                                    <img class="img-fluid rounded sm-device-img text-align"
+                                src="/img/VRTX.png" width="100%" alt="pp">
+                                            </a>
+                </div>
+            </div>
+            <div class="header-right d-flex">
+                <select class="changeLang" aria-label="Default select example">
+                                            <option value="ka"
+                            selected>
+                            Georgia
+                        </option>
+                                            <option value="pt"
+                            >
+                            Portuguese
+                        </option>
+                                            <option value="fr"
+                            >
+                            Francais
+                        </option>
+                                            <option value="afr"
+                            >
+                            Afrikaans
+                        </option>
+                                            <option value="spanish"
+                            >
+                            Spanish
+                        </option>
+                                            <option value="EN"
+                            >
+                            English
+                        </option>
+                                    </select>
+                <div class="dropdown ms-3">
+                    <button class="dropdown-toggle user-toggle-menu" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                      
+                            <img src="https://hyipmax.springsoftit.com/demo/asset/common/images/user" alt="pp">
+                        
+                        <span class="ms-2">IYOHA EGHONGHON</span>
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton1">
+                        <li><a class="dropdown-item" href="https://hyipmax.springsoftit.com/demo/2fa">2fa</a></li>
+                        <li><a class="dropdown-item" href="https://hyipmax.springsoftit.com/demo/profile/setting">Settings</a></li>
+                        <li><a class="dropdown-item" href="https://hyipmax.springsoftit.com/demo/logout">Logout</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- End Header -->
+
+    <main id="main" class="dashboard-main">
+        <section class="dashboard-section">
+
+            <div class="d-sidebar">
+                <ul class="d-sidebar-menu">
+                    <li class="">
+                        <a href="dashboard.html"><i data-feather="home"></i> Dashboard</a>
+                    </li>
+
+                    <li class="has_submenu open">
+                        <a href="investmentplan.html"><i data-feather="zap"></i> Investment</a>
+                        <ul class="submenu">
+                            <li class="active">
+                                <a href="https://hyipmax.springsoftit.com/demo/investmentplan"><i data-feather="chevrons-right"></i></i> Investment plans</a>
+                            </li>
+                            <li class="">
+                                <a href="https://hyipmax.springsoftit.com/demo/invest/log"><i data-feather="chevrons-right"></i> Invest log</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="has_submenu ">
+                         <a href="deposit.html"><i data-feather="briefcase"></i> Deposit</a>
+                        
+                    </li>
+
+                    <li class="has_submenu ">
+                         <a href="withdraw.html"><i data-feather="credit-card"></i> Withdraw</a>
+                        
+                    </li>
+
+                    <li class=""><a href="transfer-money.html"><i data-feather="repeat"></i> Transfer money</a>
+                    </li>
+
+                    <li class="">
+                        <a href="#">
+            <i data-feather="file-text"></i>
+                Loan
+            </a>
+                    </li>
+
+                    <li class="">
+                        <a href="#"><i data-feather="file-text"></i>Space X</a>
+                    </li>
+                    <li class="">
+                        <a href="#"><i data-feather="file-text"></i> Connect Wallet</a>
+                    </li>
+                  
+                     <li class="">
+                        <a href="#"><i data-feather="file-text"></i> Refferal log</a>
+                    </li>
+
+        
+                    <li class="">
+                        <a href="#"><i data-feather="life-buoy"></i> Support</a>
+                    </li>
+                    <li>
+                        <a href="/views/signin.html"><i data-feather="log-out"></i> Logout</a>
+                    </li>
+                </ul>
+                <div class="d-plan-notice mt-4 mx-3">
+                    <p class="mb-0">Your current plan -N/A
+                    </p>
+                    <a href="https://hyipmax.springsoftit.com/demo/investmentplan">Update plan <i class="fas fa-arrow-up"></i></a>
+                </div>
+            </div>
+
+
+            <!-- mobile bottom menu start -->
+            <div class="mobile-bottom-menu-wrapper">
+                <ul class="mobile-bottom-menu">
+                    <li>
+                       
+                        <a href="deposit.html" class="">
+        <i class="bi bi-wallet2"></i>
+        <span>Deposit</span>
+      </a>
+                    </li>
+                    <li>
+                        <a href="investmentplan.html" class="active">
+        <i class="bi bi-piggy-bank"></i>
+        <span>My invest</span>
+      </a>
+                    </li>
+                    <li>
+                       
+     <a href="dashboard.html" class="">
+        <i class="bi bi-house-door"></i>
+        <span>Home</span>
+      </a>
+                    </li>
+                    <li>
+                        <a href="withdraw.html" class="">
+        <i class="bi bi-cash-coin"></i>
+        <span>Withdraw</span>
+      </a>
+                    </li>
+                    <li>
+                        <a href="#" class="">
+        <i class="bi bi-shuffle"></i>
+        <span>More</span>
+      </a>
+                    </li>
+                </ul>
+            </div>
+            <!-- mobile bottom menu end -->
+            <div class="dashboard-body-part">
+
+                <div class="mobile-page-header">
+                    <h5 class="title">Investment</h5>
+                    <a href="https://hyipmax.springsoftit.com/demo/dashboard" class="back-btn"><i class="bi bi-arrow-left"></i> Back</a>
+                </div>
+
+                <div class="row gy-4 items-wrapper justify-content-center">
+                    <div class="col-xxl-4 col-xl-6 col-md-6">
+                        <div class="plan-item">
+                            <div class="plan-name-area text-center">
+                                <h3 class="plan-name mb-2">Smart Life</h3>
+                            </div>
+
+                            <div class="star-img">
+                                <img src="https://hyipmax.springsoftit.com/demo/asset/theme5/images/elements/star.png" alt="image">
+                            </div>
+
+                            <div class="plan-rio text-center">
+                                <p class="plan-amount">
+                                    40.00 %
+                                </p>
+                            </div>
+
+                            <div class="plan-fatures">
+                                <ul class="plan-list">
+                                    <li>
+                                        <span class="caption"><i class="fas fa-check"></i> Minimum </span>
+                                        <span class="details"> 100.00 $</span>
+                                    </li>
+                                    <li>
+                                        <span class="caption"><i class="fas fa-check"></i> Maximum </span>
+                                        <span class="details"> 900,000,000.00 $</span>
+                                    </li>
+
+                                    <li>
+                                        <span class="caption"><i class="fas fa-check"></i> For </span>
+                                        <span class="details"> Lifetime</span>
+                                    </li>
+                                    <li>
+                                        <span class="caption"><i class="fas fa-check"></i> Rio back </span>
+                                        <span class="details"> Every Month</span>
+                                    </li>
+
+                                    <li>
+                                        <span class="caption"><i class="fas fa-check"></i> Capital back </span>
+                                        <span class="details"> No</span>
+                                    </li>
+                                </ul>
+
+                                <div class="view-affiliate-wrapper mt-4">
+                                    <p>Affiliate bonus</p>
+                                    <button type="button" class="view-affiliate-btn">View all</button>
+                                    <div class="plan-referral-area">
+                                        <div class="plan-referral pt-3">
+                                            <button type="button" class="plan-referral-area-close"><i class="fas fa-times"></i></button>
+                                            <h6 class="text-center mb-4">Affiliate bonus</h6>
+                                            <div class="single-referral">
+                                                <p>level 1</p>
+                                                <span>1 %</span>
+                                            </div>
+                                            <div class="single-referral">
+                                                <p>level 2</p>
+                                                <span>2 %</span>
+                                            </div>
+                                            <div class="single-referral">
+                                                <p>level 3</p>
+                                                <span>3 %</span>
+                                            </div>
+                                            <div class="single-referral">
+                                                <p>level 4</p>
+                                                <span>4 %</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="plan-action">
+                                <a class="btn btn-md main-btn plan-btn w-100" href="https://hyipmax.springsoftit.com/demo/gateways/1">
+                            <span>Invest now</span>
+                        </a>
+                                <button class="btn btn-md main-btn2 bg-white sp_text_dark balance w-100 mt-2 justify-content-center" data-plan="{&quot;id&quot;:1,&quot;plan_name&quot;:&quot;Smart Life&quot;,&quot;amount_type&quot;:&quot;0&quot;,&quot;minimum_amount&quot;:&quot;100.00000000&quot;,&quot;maximum_amount&quot;:&quot;900000000.00000000&quot;,&quot;amount&quot;:&quot;0.00000000&quot;,&quot;return_interest&quot;:&quot;40.00000000&quot;,&quot;interest_status&quot;:&quot;percentage&quot;,&quot;return_for&quot;:&quot;0&quot;,&quot;how_many_time&quot;:&quot;0&quot;,&quot;every_time&quot;:&quot;3&quot;,&quot;capital_back&quot;:&quot;0&quot;,&quot;status&quot;:&quot;1&quot;,&quot;invest_limit&quot;:&quot;100000&quot;,&quot;created_at&quot;:&quot;2023-10-08T21:16:45.000000Z&quot;,&quot;updated_at&quot;:&quot;2024-02-04T02:12:13.000000Z&quot;,&quot;time&quot;:{&quot;id&quot;:3,&quot;name&quot;:&quot;Month&quot;,&quot;time&quot;:&quot;720&quot;,&quot;created_at&quot;:&quot;2022-02-27T02:15:23.000000Z&quot;,&quot;updated_at&quot;:&quot;2022-04-16T03:30:36.000000Z&quot;},&quot;referrals&quot;:{&quot;id&quot;:8,&quot;plan_id&quot;:&quot;1&quot;,&quot;type&quot;:&quot;invest&quot;,&quot;level&quot;:[&quot;level 1&quot;,&quot;level 2&quot;,&quot;level 3&quot;,&quot;level 4&quot;],&quot;commision&quot;:[&quot;1&quot;,&quot;2&quot;,&quot;3&quot;,&quot;4&quot;],&quot;status&quot;:&quot;1&quot;,&quot;created_at&quot;:&quot;2023-10-08T21:17:53.000000Z&quot;,&quot;updated_at&quot;:&quot;2023-10-08T21:17:53.000000Z&quot;}}"
+                                    data-url=""><span>Invest using balance</span></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xxl-4 col-xl-6 col-md-6">
+                        <div class="plan-item">
+                            <div class="plan-name-area text-center">
+                                <h3 class="plan-name mb-2">Platinum</h3>
+                            </div>
+
+                            <div class="star-img">
+                                <img src="https://hyipmax.springsoftit.com/demo/asset/theme5/images/elements/star.png" alt="image">
+                            </div>
+
+                            <div class="plan-rio text-center">
+                                <p class="plan-amount">
+                                    10.00 %
+                                </p>
+                            </div>
+
+                            <div class="plan-fatures">
+                                <ul class="plan-list">
+                                    <li>
+                                        <span class="caption"><i class="fas fa-check"></i> Minimum </span>
+                                        <span class="details"> 10.00 $</span>
+                                    </li>
+                                    <li>
+                                        <span class="caption"><i class="fas fa-check"></i> Maximum </span>
+                                        <span class="details"> 1,000.00 $</span>
+                                    </li>
+
+                                    <li>
+                                        <span class="caption"><i class="fas fa-check"></i> For </span>
+                                        <span class="details"> 99 Times</span>
+                                    </li>
+                                    <li>
+                                        <span class="caption"><i class="fas fa-check"></i> Rio back </span>
+                                        <span class="details"> Every Day</span>
+                                    </li>
+
+                                    <li>
+                                        <span class="caption"><i class="fas fa-check"></i> Capital back </span>
+                                        <span class="details"> Yes</span>
+                                    </li>
+                                </ul>
+
+                                <div class="view-affiliate-wrapper mt-4">
+                                    <p>Affiliate bonus</p>
+                                    <button type="button" class="view-affiliate-btn">View all</button>
+                                    <div class="plan-referral-area">
+                                        <div class="plan-referral pt-3">
+                                            <button type="button" class="plan-referral-area-close"><i class="fas fa-times"></i></button>
+                                            <h6 class="text-center mb-4">Affiliate bonus</h6>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="plan-action">
+                                <a class="btn btn-md main-btn plan-btn w-100" href="https://hyipmax.springsoftit.com/demo/gateways/2">
+                            <span>Invest now</span>
+                        </a>
+                                <button class="btn btn-md main-btn2 bg-white sp_text_dark balance w-100 mt-2 justify-content-center" data-plan="{&quot;id&quot;:2,&quot;plan_name&quot;:&quot;Platinum&quot;,&quot;amount_type&quot;:&quot;0&quot;,&quot;minimum_amount&quot;:&quot;10.00000000&quot;,&quot;maximum_amount&quot;:&quot;1000.00000000&quot;,&quot;amount&quot;:&quot;0.00000000&quot;,&quot;return_interest&quot;:&quot;10.00000000&quot;,&quot;interest_status&quot;:&quot;percentage&quot;,&quot;return_for&quot;:&quot;1&quot;,&quot;how_many_time&quot;:&quot;99&quot;,&quot;every_time&quot;:&quot;5&quot;,&quot;capital_back&quot;:&quot;1&quot;,&quot;status&quot;:&quot;1&quot;,&quot;invest_limit&quot;:&quot;4000&quot;,&quot;created_at&quot;:&quot;2023-10-08T21:17:07.000000Z&quot;,&quot;updated_at&quot;:&quot;2024-02-04T02:09:25.000000Z&quot;,&quot;time&quot;:{&quot;id&quot;:5,&quot;name&quot;:&quot;Day&quot;,&quot;time&quot;:&quot;24&quot;,&quot;created_at&quot;:&quot;2022-02-27T02:16:37.000000Z&quot;,&quot;updated_at&quot;:&quot;2022-04-16T03:28:43.000000Z&quot;},&quot;referrals&quot;:null}"
+                                    data-url=""><span>Invest using balance</span></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xxl-4 col-xl-6 col-md-6">
+                        <div class="plan-item">
+                            <div class="plan-name-area text-center">
+                                <h3 class="plan-name mb-2">BTC Trading</h3>
+                            </div>
+
+                            <div class="star-img">
+                                <img src="https://hyipmax.springsoftit.com/demo/asset/theme5/images/elements/star.png" alt="image">
+                            </div>
+
+                            <div class="plan-rio text-center">
+                                <p class="plan-amount">
+                                    35.00 %
+                                </p>
+                            </div>
+
+                            <div class="plan-fatures">
+                                <ul class="plan-list">
+                                    <li>
+                                        <span class="caption"><i class="fas fa-check"></i> Minimum </span>
+                                        <span class="details"> 10,000.00 $</span>
+                                    </li>
+                                    <li>
+                                        <span class="caption"><i class="fas fa-check"></i> Maximum </span>
+                                        <span class="details"> 600,000.00 $</span>
+                                    </li>
+
+                                    <li>
+                                        <span class="caption"><i class="fas fa-check"></i> For </span>
+                                        <span class="details"> 90 Times</span>
+                                    </li>
+                                    <li>
+                                        <span class="caption"><i class="fas fa-check"></i> Rio back </span>
+                                        <span class="details"> Every Day</span>
+                                    </li>
+
+                                    <li>
+                                        <span class="caption"><i class="fas fa-check"></i> Capital back </span>
+                                        <span class="details"> Yes</span>
+                                    </li>
+                                </ul>
+
+                                <div class="view-affiliate-wrapper mt-4">
+                                    <p>Affiliate bonus</p>
+                                    <button type="button" class="view-affiliate-btn">View all</button>
+                                    <div class="plan-referral-area">
+                                        <div class="plan-referral pt-3">
+                                            <button type="button" class="plan-referral-area-close"><i class="fas fa-times"></i></button>
+                                            <h6 class="text-center mb-4">Affiliate bonus</h6>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="plan-action">
+                                <a class="btn btn-md main-btn plan-btn w-100" href="https://hyipmax.springsoftit.com/demo/gateways/3">
+                            <span>Invest now</span>
+                        </a>
+                                <button class="btn btn-md main-btn2 bg-white sp_text_dark balance w-100 mt-2 justify-content-center" data-plan="{&quot;id&quot;:3,&quot;plan_name&quot;:&quot;BTC Trading&quot;,&quot;amount_type&quot;:&quot;0&quot;,&quot;minimum_amount&quot;:&quot;10000.00000000&quot;,&quot;maximum_amount&quot;:&quot;600000.00000000&quot;,&quot;amount&quot;:&quot;0.00000000&quot;,&quot;return_interest&quot;:&quot;35.00000000&quot;,&quot;interest_status&quot;:&quot;percentage&quot;,&quot;return_for&quot;:&quot;1&quot;,&quot;how_many_time&quot;:&quot;90&quot;,&quot;every_time&quot;:&quot;5&quot;,&quot;capital_back&quot;:&quot;1&quot;,&quot;status&quot;:&quot;1&quot;,&quot;invest_limit&quot;:&quot;5000&quot;,&quot;created_at&quot;:&quot;2023-10-08T21:17:23.000000Z&quot;,&quot;updated_at&quot;:&quot;2024-02-04T02:08:12.000000Z&quot;,&quot;time&quot;:{&quot;id&quot;:5,&quot;name&quot;:&quot;Day&quot;,&quot;time&quot;:&quot;24&quot;,&quot;created_at&quot;:&quot;2022-02-27T02:16:37.000000Z&quot;,&quot;updated_at&quot;:&quot;2022-04-16T03:28:43.000000Z&quot;},&quot;referrals&quot;:null}"
+                                    data-url=""><span>Invest using balance</span></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xxl-4 col-xl-6 col-md-6">
+                        <div class="plan-item">
+                            <div class="plan-name-area text-center">
+                                <h3 class="plan-name mb-2">Max Pro</h3>
+                            </div>
+
+                            <div class="star-img">
+                                <img src="https://hyipmax.springsoftit.com/demo/asset/theme5/images/elements/star.png" alt="image">
+                            </div>
+
+                            <div class="plan-rio text-center">
+                                <p class="plan-amount">
+                                    500.00 $
+                                </p>
+                            </div>
+
+                            <div class="plan-fatures">
+                                <ul class="plan-list">
+                                    <li>
+                                        <span class="caption"><i class="fas fa-check"></i> Monto </span>
+                                        <span class="details"> 5,000.00 $</span>
+                                    </li>
+
+                                    <li>
+                                        <span class="caption"><i class="fas fa-check"></i> For </span>
+                                        <span class="details"> Lifetime</span>
+                                    </li>
+                                    <li>
+                                        <span class="caption"><i class="fas fa-check"></i> Rio back </span>
+                                        <span class="details"> Every ROI Time</span>
+                                    </li>
+
+                                    <li>
+                                        <span class="caption"><i class="fas fa-check"></i> Capital back </span>
+                                        <span class="details"> No</span>
+                                    </li>
+                                </ul>
+
+                                <div class="view-affiliate-wrapper mt-4">
+                                    <p>Affiliate bonus</p>
+                                    <button type="button" class="view-affiliate-btn">View all</button>
+                                    <div class="plan-referral-area">
+                                        <div class="plan-referral pt-3">
+                                            <button type="button" class="plan-referral-area-close"><i class="fas fa-times"></i></button>
+                                            <h6 class="text-center mb-4">Affiliate bonus</h6>
+                                            <div class="single-referral">
+                                                <p>level 1</p>
+                                                <span>1 %</span>
+                                            </div>
+                                            <div class="single-referral">
+                                                <p>level 2</p>
+                                                <span>2 %</span>
+                                            </div>
+                                            <div class="single-referral">
+                                                <p>level 3</p>
+                                                <span>3 %</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="plan-action">
+                                <a class="btn btn-md main-btn plan-btn w-100" href="https://hyipmax.springsoftit.com/demo/gateways/4">
+                            <span>Invest now</span>
+                        </a>
+                                <button class="btn btn-md main-btn2 bg-white sp_text_dark balance w-100 mt-2 justify-content-center" data-plan="{&quot;id&quot;:4,&quot;plan_name&quot;:&quot;Max Pro&quot;,&quot;amount_type&quot;:&quot;1&quot;,&quot;minimum_amount&quot;:&quot;0.00000000&quot;,&quot;maximum_amount&quot;:&quot;0.00000000&quot;,&quot;amount&quot;:&quot;5000.00000000&quot;,&quot;return_interest&quot;:&quot;500.00000000&quot;,&quot;interest_status&quot;:&quot;fixed&quot;,&quot;return_for&quot;:&quot;0&quot;,&quot;how_many_time&quot;:&quot;0&quot;,&quot;every_time&quot;:&quot;8&quot;,&quot;capital_back&quot;:&quot;0&quot;,&quot;status&quot;:&quot;1&quot;,&quot;invest_limit&quot;:&quot;500&quot;,&quot;created_at&quot;:&quot;2023-10-08T23:17:33.000000Z&quot;,&quot;updated_at&quot;:&quot;2024-02-04T02:06:25.000000Z&quot;,&quot;time&quot;:{&quot;id&quot;:8,&quot;name&quot;:&quot;ROI Time&quot;,&quot;time&quot;:&quot;48&quot;,&quot;created_at&quot;:&quot;2023-10-14T00:13:07.000000Z&quot;,&quot;updated_at&quot;:&quot;2023-10-16T18:47:53.000000Z&quot;},&quot;referrals&quot;:{&quot;id&quot;:9,&quot;plan_id&quot;:&quot;4&quot;,&quot;type&quot;:&quot;interest&quot;,&quot;level&quot;:[&quot;level 1&quot;,&quot;level 2&quot;,&quot;level 3&quot;],&quot;commision&quot;:[&quot;1&quot;,&quot;2&quot;,&quot;3&quot;],&quot;status&quot;:&quot;1&quot;,&quot;created_at&quot;:&quot;2023-10-08T21:18:04.000000Z&quot;,&quot;updated_at&quot;:&quot;2023-10-12T21:29:11.000000Z&quot;}}"
+                                    data-url=""><span>Invest using balance</span></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xxl-4 col-xl-6 col-md-6">
+                        <div class="plan-item">
+                            <div class="plan-name-area text-center">
+                                <h3 class="plan-name mb-2">Binance Pro</h3>
+                            </div>
+
+                            <div class="star-img">
+                                <img src="https://hyipmax.springsoftit.com/demo/asset/theme5/images/elements/star.png" alt="image">
+                            </div>
+
+                            <div class="plan-rio text-center">
+                                <p class="plan-amount">
+                                    30.00 %
+                                </p>
+                            </div>
+
+                            <div class="plan-fatures">
+                                <ul class="plan-list">
+                                    <li>
+                                        <span class="caption"><i class="fas fa-check"></i> Minimum </span>
+                                        <span class="details"> 100.00 $</span>
+                                    </li>
+                                    <li>
+                                        <span class="caption"><i class="fas fa-check"></i> Maximum </span>
+                                        <span class="details"> 90,000.00 $</span>
+                                    </li>
+
+                                    <li>
+                                        <span class="caption"><i class="fas fa-check"></i> For </span>
+                                        <span class="details"> 90 Times</span>
+                                    </li>
+                                    <li>
+                                        <span class="caption"><i class="fas fa-check"></i> Rio back </span>
+                                        <span class="details"> Every Day</span>
+                                    </li>
+
+                                    <li>
+                                        <span class="caption"><i class="fas fa-check"></i> Capital back </span>
+                                        <span class="details"> Yes</span>
+                                    </li>
+                                </ul>
+
+                                <div class="view-affiliate-wrapper mt-4">
+                                    <p>Affiliate bonus</p>
+                                    <button type="button" class="view-affiliate-btn">View all</button>
+                                    <div class="plan-referral-area">
+                                        <div class="plan-referral pt-3">
+                                            <button type="button" class="plan-referral-area-close"><i class="fas fa-times"></i></button>
+                                            <h6 class="text-center mb-4">Affiliate bonus</h6>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="plan-action">
+                                <a class="btn btn-md main-btn plan-btn w-100" href="https://hyipmax.springsoftit.com/demo/gateways/5">
+                            <span>Invest now</span>
+                        </a>
+                                <button class="btn btn-md main-btn2 bg-white sp_text_dark balance w-100 mt-2 justify-content-center" data-plan="{&quot;id&quot;:5,&quot;plan_name&quot;:&quot;Binance Pro&quot;,&quot;amount_type&quot;:&quot;0&quot;,&quot;minimum_amount&quot;:&quot;100.00000000&quot;,&quot;maximum_amount&quot;:&quot;90000.00000000&quot;,&quot;amount&quot;:null,&quot;return_interest&quot;:&quot;30.00000000&quot;,&quot;interest_status&quot;:&quot;percentage&quot;,&quot;return_for&quot;:&quot;1&quot;,&quot;how_many_time&quot;:&quot;90&quot;,&quot;every_time&quot;:&quot;5&quot;,&quot;capital_back&quot;:&quot;1&quot;,&quot;status&quot;:&quot;1&quot;,&quot;invest_limit&quot;:&quot;100000&quot;,&quot;created_at&quot;:&quot;2024-02-04T02:03:31.000000Z&quot;,&quot;updated_at&quot;:&quot;2024-02-04T02:03:31.000000Z&quot;,&quot;time&quot;:{&quot;id&quot;:5,&quot;name&quot;:&quot;Day&quot;,&quot;time&quot;:&quot;24&quot;,&quot;created_at&quot;:&quot;2022-02-27T02:16:37.000000Z&quot;,&quot;updated_at&quot;:&quot;2022-04-16T03:28:43.000000Z&quot;},&quot;referrals&quot;:null}"
+                                    data-url=""><span>Invest using balance</span></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xxl-4 col-xl-6 col-md-6">
+                        <div class="plan-item">
+                            <div class="plan-name-area text-center">
+                                <h3 class="plan-name mb-2">P2P Trading</h3>
+                            </div>
+
+                            <div class="star-img">
+                                <img src="https://hyipmax.springsoftit.com/demo/asset/theme5/images/elements/star.png" alt="image">
+                            </div>
+
+                            <div class="plan-rio text-center">
+                                <p class="plan-amount">
+                                    20.00 %
+                                </p>
+                            </div>
+
+                            <div class="plan-fatures">
+                                <ul class="plan-list">
+                                    <li>
+                                        <span class="caption"><i class="fas fa-check"></i> Minimum </span>
+                                        <span class="details"> 1,000.00 $</span>
+                                    </li>
+                                    <li>
+                                        <span class="caption"><i class="fas fa-check"></i> Maximum </span>
+                                        <span class="details"> 50,000.00 $</span>
+                                    </li>
+
+                                    <li>
+                                        <span class="caption"><i class="fas fa-check"></i> For </span>
+                                        <span class="details"> 199 Times</span>
+                                    </li>
+                                    <li>
+                                        <span class="caption"><i class="fas fa-check"></i> Rio back </span>
+                                        <span class="details"> Every Hours</span>
+                                    </li>
+
+                                    <li>
+                                        <span class="caption"><i class="fas fa-check"></i> Capital back </span>
+                                        <span class="details"> No</span>
+                                    </li>
+                                </ul>
+
+                                <div class="view-affiliate-wrapper mt-4">
+                                    <p>Affiliate bonus</p>
+                                    <button type="button" class="view-affiliate-btn">View all</button>
+                                    <div class="plan-referral-area">
+                                        <div class="plan-referral pt-3">
+                                            <button type="button" class="plan-referral-area-close"><i class="fas fa-times"></i></button>
+                                            <h6 class="text-center mb-4">Affiliate bonus</h6>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="plan-action">
+                                <a class="btn btn-md main-btn plan-btn w-100" href="https://hyipmax.springsoftit.com/demo/gateways/6">
+                            <span>Invest now</span>
+                        </a>
+                                <button class="btn btn-md main-btn2 bg-white sp_text_dark balance w-100 mt-2 justify-content-center" data-plan="{&quot;id&quot;:6,&quot;plan_name&quot;:&quot;P2P Trading&quot;,&quot;amount_type&quot;:&quot;0&quot;,&quot;minimum_amount&quot;:&quot;1000.00000000&quot;,&quot;maximum_amount&quot;:&quot;50000.00000000&quot;,&quot;amount&quot;:null,&quot;return_interest&quot;:&quot;20.00000000&quot;,&quot;interest_status&quot;:&quot;percentage&quot;,&quot;return_for&quot;:&quot;1&quot;,&quot;how_many_time&quot;:&quot;199&quot;,&quot;every_time&quot;:&quot;6&quot;,&quot;capital_back&quot;:&quot;0&quot;,&quot;status&quot;:&quot;1&quot;,&quot;invest_limit&quot;:&quot;700000&quot;,&quot;created_at&quot;:&quot;2024-02-04T02:05:10.000000Z&quot;,&quot;updated_at&quot;:&quot;2024-02-04T02:05:10.000000Z&quot;,&quot;time&quot;:{&quot;id&quot;:6,&quot;name&quot;:&quot;Hours&quot;,&quot;time&quot;:&quot;1&quot;,&quot;created_at&quot;:&quot;2022-02-27T02:17:05.000000Z&quot;,&quot;updated_at&quot;:&quot;2022-04-16T03:26:33.000000Z&quot;},&quot;referrals&quot;:null}"
+                                    data-url=""><span>Invest using balance</span></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="modal fade" id="invest" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <form action="https://hyipmax.springsoftit.com/demo/investmentplan/invest" method="post">
+                        <input type="hidden" name="_token" value="8t2qBsZ9bNC9IJbiVftzlfRSkXrnkeSx6CZqjTc3">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title">Invest now</h5>
+                                <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="container-fluid">
+                                    <div class="form-group">
+                                        <label for="">Invest amount</label>
+                                        <input type="text" name="amount" class="form-control">
+                                        <input type="hidden" name="plan_id" class="form-control">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                <button type="submit" class="btn main-btn"><span>Invest now</span></button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+    <script src="https://hyipmax.springsoftit.com/demo/asset/common/js/jquery.min.js"></script>
+    <script src="https://hyipmax.springsoftit.com/demo/asset/common/js/bootstrap.bundle.min.js"></script>
+    <script src="https://hyipmax.springsoftit.com/demo/asset/theme5/frontend/js/feather.min.js"></script>
+    <script src="https://hyipmax.springsoftit.com/demo/asset/common/js/slick.min.js"></script>
+    <script src="https://hyipmax.springsoftit.com/demo/asset/common/js/iziToast.min.js"></script>
+    <script src="https://hyipmax.springsoftit.com/demo/asset/theme5/frontend/js/user_dashboard.js"></script>
+
+    <script>
+        $(function() {
+            'use strict'
+
+            $('.balance').on('click', function() {
+                const modal = $('#invest');
+                modal.find('input[name=plan_id]').val($(this).data('plan').id);
+                modal.modal('show')
+            })
+
+            $(".view-affiliate-btn").on("click", function() {
+                $(this).siblings(".plan-referral-area").addClass("active");
+            });
+
+            $(".plan-referral-area-close").on("click", function() {
+                $(this).parent(".plan-referral").parent(".plan-referral-area").removeClass("active");
+            });
+        })
+    </script>
+
+
+
+
+
+    <script>
+        'use strict'
+        var url = "https://hyipmax.springsoftit.com/demo/changeLang";
+
+        $(".changeLang").change(function() {
+            if ($(this).val() == '') {
+                return false;
+            }
+            window.location.href = url + "?lang=" + $(this).val();
+        });
+
+        feather.replace();
+
+        // responsive menu slideing
+        $(".d-sidebar-menu>li>a").on("click", function() {
+            var element = $(this).parent("li");
+            if (element.hasClass("open")) {
+                element.removeClass("open");
+                element.find("li").removeClass("open");
+                element.find("ul").slideUp(500, "linear");
+            } else {
+                element.addClass("open");
+                element.children("ul").slideDown();
+                element.siblings("li").children("ul").slideUp();
+                element.siblings("li").removeClass("open");
+                element.siblings("li").find("li").removeClass("open");
+                element.siblings("li").find("ul").slideUp();
+            }
+        });
+
+        $('.sidebar-open-btn').on('click', function() {
+            $(this).toggleClass('active');
+            $('.d-sidebar').toggleClass('active');
+        });
+    </script>
+</body>
+
+</html>
