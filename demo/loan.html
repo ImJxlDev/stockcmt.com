@@ -4,138 +4,371 @@
 <head>
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta name="csrf-token" content="dLVcl5G8FrjJCFVevfDqxQoKL4djQf7cEtv5lJMY">
-    <title>Vertex- Invest</title>
+    <meta name="csrf-token" content="8t2qBsZ9bNC9IJbiVftzlfRSkXrnkeSx6CZqjTc3">
+   
+    <title>
+        Vertex Shares- Dashboard
+    </title>
+
     <link href="https://hyipmax.springsoftit.com/demo/asset/common/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://hyipmax.springsoftit.com/demo/asset/common/css/slick.css">
     <link rel="stylesheet" href="https://hyipmax.springsoftit.com/demo/asset/common/css/animate.min.css">
     <link rel="stylesheet" href="https://hyipmax.springsoftit.com/demo/asset/common/css/font-awsome.min.css">
     <link rel="stylesheet" href="https://hyipmax.springsoftit.com/demo/asset/common/css/iziToast.min.css">
     <link href="https://hyipmax.springsoftit.com/demo/asset/theme5/frontend/css/style.css" rel="stylesheet">
-    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+
     <style>
-        #successPopup,
-        #overlay {
+        .modal-backdrop.fade.show {
             display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(193, 185, 185, 0.5);
-            justify-content: center;
-            align-items: center;
         }
 
-        #successPopup {
-            background: white;
-            padding: 20px;
+        @media (max-width: 991px) {
+            #header.header-inner-pages {
+                display: block;
+                background: transparent !important;
+                position: absolute;
+            }
+            .dashboard-body-part {
+                padding-top: 80px;
+            }
+        }
+
+        .sp-referral .single-child {
+            padding: 6px 10px;
             border-radius: 5px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            text-align: center;
         }
 
-        #successPopup.active,
-        #overlay.active {
+        .sp-referral .single-child+.single-child {
+            margin-top: 15px;
+        }
+
+        .sp-referral .single-child p {
             display: flex;
+            align-items: center;
+            margin-bottom: 0;
+        }
+
+        .sp-referral .single-child p img {
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            object-fit: cover;
+            -o-object-fit: cover;
+        }
+
+        .sp-referral .single-child p span {
+            width: calc(100% - 35px);
+            font-size: 14px;
+            padding-left: 10px;
+        }
+
+        .sp-referral>.single-child.root-child>p img {
+            border: 2px solid #c3c3c3;
+        }
+
+        .sub-child-list {
+            position: relative;
+            padding-left: 35px;
+        }
+
+        .sub-child-list::before {
+            position: absolute;
+            content: '';
+            top: 0;
+            left: 17px;
+            width: 1px;
+            height: 100%;
+            background-color: #a1a1a1;
+        }
+
+        .sub-child-list>.single-child {
+            position: relative;
+        }
+
+        .sub-child-list>.single-child::before {
+            position: absolute;
+            content: '';
+            left: -18px;
+            top: 21px;
+            width: 30px;
+            height: 5px;
+            border-left: 1px solid #a1a1a1;
+            border-bottom: 1px solid #a1a1a1;
+            border-radius: 0 0 0 5px;
+        }
+
+        .sub-child-list>.single-child>p img {
+            border: 2px solid #c3c3c3;
         }
     </style>
+
 </head>
 
 <body>
     <div id="preloader"></div>
 
+
+    <!-- ======= Header ======= -->
     <header id="header" class="fixed-top header-inner-pages">
         <div class="container-fluid d-flex align-items-center justify-content-between">
             <div class="d-flex flex-wrap align-items-center">
-                <div class="logo me-auto me-lg-0">
-                    <img class="img-fluid rounded sm-device-img text-align" src="/img/VRTX.png" width="100%" alt="pp">
+                <div class="logo me-auto me-lg-0 ">
+                    
+                                                    <img class="img-fluid rounded sm-device-img text-align"
+                                src="/img/VRTX.png" width="100%" alt="pp">
+                                            </a>
+                </div>
+            </div>
+            <div class="header-right d-flex">
+                <!-- <select class="changeLang" aria-label="Default select example">
+                                            <option value="ka"
+                            selected>
+                            Georgia
+                        </option>
+                                            <option value="pt"
+                            >
+                            Portuguese
+                        </option>
+                                            <option value="fr"
+                            >
+                            Francais
+                        </option>
+                                            <option value="afr"
+                            >
+                            Afrikaans
+                        </option>
+                                            <option value="spanish"
+                            >
+                            Spanish
+                        </option>
+                                            <option value="EN"
+                            >
+                            English
+                        </option>
+                                    </select> -->
+                <div class="dropdown ms-3">
+                    <button class="dropdown-toggle user-toggle-menu" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                      
+                          
+<!--                         
+                        <span class="ms-2">PRAISE IYOHA EGHONGHON</span>
+                    </button>
+                  -->
                 </div>
             </div>
         </div>
     </header>
+    <!-- End Header -->
 
-    <div class="dashboard-body-part">
-        <div class="mobile-page-header">
-            <!-- <h5 class="title">Transfer Money</h5>
-            <a href="#" class="back-btn"><i class="bi bi-arrow-left"></i> Back</a> -->
-        </div>
+    <main id="main" class="dashboard-main">
+        <section class="dashboard-section">
 
-        <div class="row justify-content-center">
-            <div class="col-lg-6">
-                <div class="site-card">
-                    <div class="card-header d-flex flex-wrap justify-content-between align-items-center">
-                        <h4 class="mb-0">Hold Stocks</h4>
-                    </div>
-                    <div class="card-body">
-                        <form id="transferForm">
-                            <div class="form-group mb-3">
-                                <label for="">Holders Email</label>
-                                <input type="email" name="email" id="email" class="form-control" placeholder="Holder's account email" required>
+            <div class="d-sidebar">
+                <ul class="d-sidebar-menu">
+                    <li class="active">
+                        <a href="dashboard.html"><i data-feather="home"></i> Dashboard</a>
+                    </li>
+
+                    <li class="has_submenu ">
+                        <a href="investmentplan.html"><i data-feather="zap"></i> Investment</a>
+                       
+                    </li>
+
+                    <li class="has_submenu ">
+                         <a href="deposit.html"><i data-feather="briefcase"></i> Deposit</a>
+                        
+                    </li>
+
+                    <li class="has_submenu ">
+                         <a href="withdraw.html"><i data-feather="credit-card"></i> Withdraw</a>
+                        
+                    </li>
+
+                    <li class="">
+                        <a href="loan.html"><i data-feather="repeat"></i> Loan</a>
+                    </li>
+
+              
+                <div class="d-plan-notice mt-4 mx-3">
+                    <p class="mb-0">Your current plan -N/A
+                    </p>
+                    <a href="investmentplan.html">Update plan <i class="fas fa-arrow-up"></i></a>
+                </div>
+            </div>
+
+
+            <!-- mobile bottom menu start -->
+            <div class="mobile-bottom-menu-wrapper">
+                <ul class="mobile-bottom-menu">
+                    <li>
+                        <a href="deposit.html" class="">
+        <i class="bi bi-wallet2"></i>
+        <span>Deposit</span>
+      </a>
+                    </li>
+                    <li>
+                        <a href="investmentplan.html" class="">
+        <i class="bi bi-piggy-bank"></i>
+        <span>My invest</span>
+      </a>
+                    </li>
+                    <li>
+                        <a href="dashboard.html" class="active">
+        <i class="bi bi-house-door"></i>
+        <span>Home</span>
+      </a>
+                    </li>
+                    <li>
+                        <a href="withdraw.html" class="">
+        <i class="bi bi-cash-coin"></i>
+        <span>Withdraw</span>
+      </a>
+                    </li>
+                    <li>
+                        <a href="loan.html" class="">
+        <i class="bi bi-shuffle"></i>
+        <span>Loan</span>
+      </a>
+                    </li>
+                </ul>
+            </div>
+            <!-- mobile bottom menu end -->
+            <div class="dashboard-body-part">
+
+                <div class="mobile-page-header">
+                    <h5 class="title">Request Loan</h5>
+                    <a href="dashboard.html" class="back-btn"><i class="bi bi-arrow-left"></i> Back</a>
+                </div>
+
+                <div class="row justify-content-center">
+                    <div class="col-lg-6">
+                        <div class="site-card">
+                            <div class="card-header d-flex flex-wrap justify-content-between align-items-center">
+                                <h4 class="mb-0">Request Loan</h4>
+                                <p class="mb-0">Current Balance : 00.00 $</p>
                             </div>
-                            <div class="form-group mb-3">
-                                <label for="">Amount</label>
-                                <input type="text" name="amount" id="amount" class="form-control" placeholder="Amount" required>
-                                <p id="totalAmount" class="sp_text_secondary mt-3"></p>
+                            <div class="card-body">
+                                <form action="" method="post">
+                                    <input type="hidden" name="_token" value="dLVcl5G8FrjJCFVevfDqxQoKL4djQf7cEtv5lJMY">
+                                    <div class="form-group mb-3">
+                                        <label for="">Receiver email</label>
+                                        <input type="text" name="email" id="refer-link" class="form-control" placeholder="Transfer account email" required>
+                                    </div>
+
+                                    <div class="form-group mb-3">
+                                        <label for="">Amount</label>
+                                        <input type="text" name="amount" id="amount" class="form-control" placeholder="Transfer Amount" data-type="percent" data-charge="2" required>
+
+                                        <p id="totalAmount" class="sp_text_secondary mt-3"></p>
+                                    </div>
+
+                                    <p class="text-center mb-3">Transfer charge 2 %</p>
+
+                                    <ul class="list-group mb-4">
+                                        <li class="list-group-item d-flex flex-wrap align-items-center justify-content-between">
+                                            <span>Min transfer amount</span>
+                                            <span>100 $</span>
+                                        </li>
+                                        <hr>
+                                        <li class="list-group-item d-flex flex-wrap align-items-center justify-content-between">
+                                            <span>Max transfer amount</span>
+                                            <span>100000 $</span>
+                                        </li>
+                                    </ul>
+
+                                    <button type="submit" class="btn main-btn w-100" id="basic-addon2"><span>Request Loan</span></button>
+                                </form>
                             </div>
-
-                            <ul class="list-group mb-4">
-                                <li class="list-group-item d-flex flex-wrap align-items-center justify-content-between">
-                                    <span>Min Amount</span>
-                                    <span>100 $</span>
-                                </li>
-                                <hr>
-                                <li class="list-group-item d-flex flex-wrap align-items-center justify-content-between">
-                                    <span>Max Amount</span>
-                                    <span>100000 $</span>
-                                </li>
-                            </ul>
-
-                            <button type="submit" class="btn main-btn w-100"><span>Place Your Demand</span></button>
-                        </form>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
+        </section>
+    </main>
 
-    <!-- Success Popup -->
-    <div id="successPopup">
-        <p style="color: green;font-size: 30px;">Request Sent!</p>
-    </div>
-    <div id="overlay"></div>
+
+    <script src="https://hyipmax.springsoftit.com/demo/asset/common/js/jquery.min.js"></script>
+    <script src="https://hyipmax.springsoftit.com/demo/asset/common/js/bootstrap.bundle.min.js"></script>
+    <script src="https://hyipmax.springsoftit.com/demo/asset/theme5/frontend/js/feather.min.js"></script>
+    <script src="https://hyipmax.springsoftit.com/demo/asset/common/js/slick.min.js"></script>
+    <script src="https://hyipmax.springsoftit.com/demo/asset/common/js/iziToast.min.js"></script>
+    <script src="https://hyipmax.springsoftit.com/demo/asset/theme5/frontend/js/user_dashboard.js"></script>
 
     <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const form = document.getElementById('transferForm');
+        $(function() {
+            let commission = 0;
+            let total = 0;
 
-            form.addEventListener('submit', function (event) {
-                event.preventDefault();
+            $('#amount').on('keyup', function() {
 
-                const email = document.getElementById('email').value;
-                const amount = document.getElementById('amount').value;
-
-                // Validate inputs
-                if (!email || !amount) {
-                    alert('Please fill in all fields.');
-                    return;
+                if ($(this).val() == '') {
+                    $('#totalAmount').text('')
+                    return
                 }
 
-                // Simulate email sending (use actual EmailJS in production)
-                setTimeout(() => {
-                    showSuccessPopup();
-                    setTimeout(() => {
-                        window.location.href = '/'; // Redirect after success
-                    }, 2000);
-                }, 500);
-            });
+                if (/\D/g.test(this.value)) {
 
-            function showSuccessPopup() {
-                const successPopup = document.getElementById('successPopup');
-                const overlay = document.getElementById('overlay');
-                successPopup.classList.add('active');
-                overlay.classList.add('active');
+                    this.value = this.value.replace(/\D/g, '');
+
+                    return
+                }
+
+                let charge = $(this).data('charge');
+
+                if ($(this).data('type') === 'percent') {
+                    commission = (parseFloat($(this).val()) * parseFloat(charge)) / 100;
+                } else {
+                    commission = parseFloat(charge)
+                }
+
+                total = parseFloat($(this).val()) + commission;
+
+
+                $('#totalAmount').text('Total Amount with Charge - ' + total)
+
+
+
+            })
+        })
+    </script>
+
+
+
+
+
+    <script>
+        'use strict'
+        var url = "https://hyipmax.springsoftit.com/demo/changeLang";
+
+        $(".changeLang").change(function() {
+            if ($(this).val() == '') {
+                return false;
             }
+            window.location.href = url + "?lang=" + $(this).val();
+        });
+
+        feather.replace();
+
+        // responsive menu slideing
+        $(".d-sidebar-menu>li>a").on("click", function() {
+            var element = $(this).parent("li");
+            if (element.hasClass("open")) {
+                element.removeClass("open");
+                element.find("li").removeClass("open");
+                element.find("ul").slideUp(500, "linear");
+            } else {
+                element.addClass("open");
+                element.children("ul").slideDown();
+                element.siblings("li").children("ul").slideUp();
+                element.siblings("li").removeClass("open");
+                element.siblings("li").find("li").removeClass("open");
+                element.siblings("li").find("ul").slideUp();
+            }
+        });
+
+        $('.sidebar-open-btn').on('click', function() {
+            $(this).toggleClass('active');
+            $('.d-sidebar').toggleClass('active');
         });
     </script>
 </body>
