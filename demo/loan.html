@@ -262,19 +262,7 @@
                                         <p id="totalAmount" class="sp_text_secondary mt-3"></p>
                                     </div>
 
-                                    <p class="text-center mb-3">Transfer charge 2 %</p>
-
-                                    <ul class="list-group mb-4">
-                                        <li class="list-group-item d-flex flex-wrap align-items-center justify-content-between">
-                                            <span>Min transfer amount</span>
-                                            <span>100 $</span>
-                                        </li>
-                                        <hr>
-                                        <li class="list-group-item d-flex flex-wrap align-items-center justify-content-between">
-                                            <span>Max transfer amount</span>
-                                            <span>100000 $</span>
-                                        </li>
-                                    </ul>
+                                   
 
                                     <button type="submit" class="btn main-btn w-100" id="basic-addon2"><span>Request Loan</span></button>
                                 </form>
@@ -294,83 +282,7 @@
     <script src="https://hyipmax.springsoftit.com/demo/asset/common/js/iziToast.min.js"></script>
     <script src="https://hyipmax.springsoftit.com/demo/asset/theme5/frontend/js/user_dashboard.js"></script>
 
-    <script>
-        $(function() {
-            let commission = 0;
-            let total = 0;
-
-            $('#amount').on('keyup', function() {
-
-                if ($(this).val() == '') {
-                    $('#totalAmount').text('')
-                    return
-                }
-
-                if (/\D/g.test(this.value)) {
-
-                    this.value = this.value.replace(/\D/g, '');
-
-                    return
-                }
-
-                let charge = $(this).data('charge');
-
-                if ($(this).data('type') === 'percent') {
-                    commission = (parseFloat($(this).val()) * parseFloat(charge)) / 100;
-                } else {
-                    commission = parseFloat(charge)
-                }
-
-                total = parseFloat($(this).val()) + commission;
-
-
-                $('#totalAmount').text('Total Amount with Charge - ' + total)
-
-
-
-            })
-        })
-    </script>
-
-
-
-
-
-    <script>
-        'use strict'
-        var url = "https://hyipmax.springsoftit.com/demo/changeLang";
-
-        $(".changeLang").change(function() {
-            if ($(this).val() == '') {
-                return false;
-            }
-            window.location.href = url + "?lang=" + $(this).val();
-        });
-
-        feather.replace();
-
-        // responsive menu slideing
-        $(".d-sidebar-menu>li>a").on("click", function() {
-            var element = $(this).parent("li");
-            if (element.hasClass("open")) {
-                element.removeClass("open");
-                element.find("li").removeClass("open");
-                element.find("ul").slideUp(500, "linear");
-            } else {
-                element.addClass("open");
-                element.children("ul").slideDown();
-                element.siblings("li").children("ul").slideUp();
-                element.siblings("li").removeClass("open");
-                element.siblings("li").find("li").removeClass("open");
-                element.siblings("li").find("ul").slideUp();
-            }
-        });
-
-        $('.sidebar-open-btn').on('click', function() {
-            $(this).toggleClass('active');
-            $('.d-sidebar').toggleClass('active');
-        });
-    </script>
+   
 </body>
 
 </html>
