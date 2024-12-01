@@ -347,3 +347,119 @@ class EnhancedAuthSystem {
 
 // Initialize enhanced auth system
 const auth = new EnhancedAuthSystem();
+class EnhancedAdminAuthSystem extends EnhancedAuthSystem {
+    constructor() {
+        super();
+        this.selectedUserForEdit = null;
+    }
+
+    // Enhanced method to get user by email or ID
+    getUserByIdentifier(identifier) {
+        if (!this.isAdmin()) {
+            throw new Error('Unauthorized access');
+        }
+
+        return this.users.find(
+            user => user.email.toLowerCase() === identifier.toLowerCase() || 
+                    user.id === identifier
+        );
+    }
+
+    // Get detailed user dashboard information
+    getUserDashboardData(userId) {
+        if (!this.isAdmin()) {
+            throw new Error('Unauthorized access');
+        }
+
+        const user = this.getUserByIdentifier(userId);
+        if (!user) {
+            throw new Error('User not found');
+        }
+
+        // Retrieve or initialize user's dashboard data
+        return {
+            userId: user.id,
+            accountBalance: user.accountBalance || 0,
+            totalWithdraw: user.totalWithdraw || 0,
+            totalDeposit: user.totalDeposit || 0,
+            totalInvest: user.totalInvest || 0,
+            currentInvest: user.currentInvest || 0,
+            pendingInvest: user.pendingInvest || 0,
+            pendingWithdraw: user.pendingWithdraw || 0,
+            referralEarn: user.referralEarn || 0
+        };
+    }
+
+    // Update user's dashboard data by admin
+    updateUserDashboardData(userId, dashboardData) {
+        if (!this.isAdmin()) {
+            throw new Error('Unauthorized access');
+        }
+
+        const userIndex = this.users.findIndex(u => u.id === userId);
+        if (userIndex === -1) {
+            throw new Error('User not found');
+        }
+
+        // Merge new dashboard data
+        this.users[userIndex] = {
+            ...this.users[userIndex],
+            ...dashboardData
+        };
+
+        this.saveUsers();
+        return this.users[userIndex];
+    }
+
+    // Generate and set custom referral link for a user
+    generateReferralLink(userId) {
+        if (!this.isAdmin()) {
+            throw new Error('Unauthorized access');
+        }
+
+        const user = this.getUserByIdentifier(userId);
+        if (!user) {
+            throw new Error('User not found');
+        }
+
+        // Generate a unique referral link
+        const referralCode = `VRTX-${user.id.slice(0,8)}-${Math.random().toString(36).substr(2, 5)}`.toUpperCase();
+        
+        user.referralLink = `https://vertex.com/ref/${referralCode}`;
+        
+        this.saveUsers();
+        return user.referralLink;
+    }
+
+    // Advanced user search and filtering
+    searchUsers(criteria) {
+        if (!this.isAdmin()) {
+            throw new Error('Unauthorized access');
+        }
+
+        return this.users.filter(user => {
+            let match = true;
+            
+            if (criteria.email) {
+                match = match && user.email.toLowerCase().includes(criteria.email.toLowerCase());
+            }
+            
+            if (criteria.country) {
+                match = match && user.country.toLowerCase().includes(criteria.country.toLowerCase());
+            }
+            
+            if (criteria.minBalance !== undefined) {
+                match = match && (user.accountBalance || 0) >= criteria.minBalance;
+            }
+            
+            if (criteria.registeredAfter) {
+                match = match && new Date(user.createdAt) > new Date(criteria.registeredAfter);
+            }
+            
+            return match;
+        });
+    }
+}
+
+// Modify the global auth initialization
+const auth = new EnhancedAdminAuthSystem();
